@@ -22,39 +22,52 @@
 
     <script>
 
-        let options = ["Rock", "Paper", "Scissors"];
+        let userInput = prompt("Choose Rock, Paper, or Scissors by typing R, P, or S (capital letters).");
 
-        let userInput = prompt("Choose Rock, Paper, or Scissors and type R, P, or S. (Please use capital letters.)");
+        let options = ["Rock", "Paper", "Scissors"];
 
         const randomElement = options[Math.floor(Math.random() * options.length)];
 
+        let humanScore = 0;
+        let computerScore = 0;
 
 
-        function playRound(humanChoice, computerChoice) {
+
+        function playRound(humanChoice, computerChoice, humanScore, computerScore) {
             if (humanChoice == "R" && computerChoice == "Rock") {
-                alert("My choice was Rock. We are even.");
+                alert(`My choice was Rock. We are even.
+                Human: ${humanScore} . Computer: ${computerScore}`);
             } else if (humanChoice == "R" && computerChoice == "Paper") {
-                alert("My choice was Paper. I win.");
+                alert(`My choice was Paper. I win.
+                Human: ${humanScore} . Computer: ${++computerScore}`);
             } else if (humanChoice == "R" && computerChoice == "Scissors") {
-                alert("My choice was Scissors. You win.");
+                alert(`My choice was Scissors. You win.
+                Human: ${++humanScore} . Computer: ${computerScore}`);
             } else if (humanChoice == "P" && computerChoice == "Rock") {
-                alert("My choice was Rock. You win.");
+                alert(`My choice was Rock. You win.
+                Human: ${++humanScore} . Computer: ${computerScore}`);
             } else if (humanChoice == "P" && computerChoice == "Paper") {
-                alert("My choice was Paper. We are even.");
+                alert(`My choice was Paper. We are even.
+                Human: ${humanScore} . Computer: ${computerScore}`);
             } else if (humanChoice == "P" && computerChoice == "Scissors") {
-                alert("My choice was Scissors. I win.");
+                alert(`My choice was Scissors. I win.
+                Human: ${humanScore} . Computer: ${++computerScore}`);
             } else if (humanChoice == "S" && computerChoice == "Rock") {
-                alert("My choice was Rock. I win.");
+                alert(`My choice was Rock. I win.
+                Human: ${humanScore} . Computer: ${++computerScore}`);
             } else if (humanChoice == "S" && computerChoice == "Paper") {
-                alert("My choice was Paper. You win.");
+                alert(`My choice was Paper. You win.
+                Human: ${++humanScore} . Computer: ${computerScore}`);
             } else if (humanChoice == "S" && computerChoice == "Scissors") {
-                alert("My choice was Scissors. We are even.");
+                alert(`My choice was Scissors. We are even.
+                Human: ${humanScore} . Computer: ${computerScore}`);
             } else {
-                alert("Type R, P, or S. (Please use capital letters.)")
+                alert("Type R, P, or S. (Please use capital letters.)");
             }
         }
 
-        playRound(userInput, randomElement);
+        playRound(userInput, randomElement, humanScore, computerScore);
+        
             
 
   
