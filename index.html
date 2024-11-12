@@ -9,7 +9,7 @@
 
 
     <p>Refresh the page to play again.</p>
-    
+
     <script>
 
         let options = ["Rock", "Paper", "Scissors"];
@@ -19,25 +19,31 @@
         const randomElement = options[Math.floor(Math.random() * options.length)];
 
 
-            if (userInput == "R" && randomElement == "Rock") {
+
+        function playRound(humanChoice, computerChoice) {
+            if (humanChoice == "R" && computerChoice == "Rock") {
                 alert("My choice was Rock. We are even.");
-            } else if (userInput == "R" && randomElement == "Paper") {
+            } else if (humanChoice == "R" && computerChoice == "Paper") {
                 alert("My choice was Paper. I win.");
-            } else if (userInput == "R" && randomElement == "Scissors") {
+            } else if (humanChoice == "R" && computerChoice == "Scissors") {
                 alert("My choice was Scissors. You win.");
-            } else if (userInput == "P" && randomElement == "Rock") {
+            } else if (humanChoice == "P" && computerChoice == "Rock") {
                 alert("My choice was Rock. You win.");
-            } else if (userInput == "P" && randomElement == "Paper") {
+            } else if (humanChoice == "P" && computerChoice == "Paper") {
                 alert("My choice was Paper. We are even.");
-            } else if (userInput == "P" && randomElement == "Scissors") {
+            } else if (humanChoice == "P" && computerChoice == "Scissors") {
                 alert("My choice was Scissors. I win.");
-            } else if (userInput == "S" && randomElement == "Rock") {
+            } else if (humanChoice == "S" && computerChoice == "Rock") {
                 alert("My choice was Rock. I win.");
-            } else if (userInput == "S" && randomElement == "Paper") {
+            } else if (humanChoice == "S" && computerChoice == "Paper") {
                 alert("My choice was Paper. You win.");
-            } else if (userInput == "S" && randomElement == "Scissors") {
+            } else if (humanChoice == "S" && computerChoice == "Scissors") {
                 alert("My choice was Scissors. We are even.");
             }
+        }
+
+        playRound(userInput, randomElement);
+            
 
   
     </script>
