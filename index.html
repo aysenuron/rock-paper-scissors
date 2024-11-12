@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+    <script>
+
+        let options = ["Rock", "Paper", "Scissors"];
+
+        let userInput = prompt("Choose Rock, Paper, or Scissors and type R, P, or S. (Please use capital letters.)");
+
+        const randomElement = options[Math.floor(Math.random() * options.length)];
+
+
+            if (userInput == "R" && randomElement == "Rock") {
+                alert("My choice was Rock. We are even.");
+            } else if (userInput == "R" && randomElement == "Paper") {
+                alert("My choice was Paper. I win.");
+            } else if (userInput == "R" && randomElement == "Scissors") {
+                alert("My choice was Scissors. You win.");
+            } else if (userInput == "P" && randomElement == "Rock") {
+                alert("My choice was Rock. You win.");
+            } else if (userInput == "P" && randomElement == "Paper") {
+                alert("My choice was Paper. We are even.");
+            } else if (userInput == "P" && randomElement == "Scissors") {
+                alert("My choice was Scissors. I win.");
+            } else if (userInput == "S" && randomElement == "Rock") {
+                alert("My choice was Rock. I win.");
+            } else if (userInput == "S" && randomElement == "Paper") {
+                alert("My choice was Paper. You win.");
+            } else if (userInput == "S" && randomElement == "Scissors") {
+                alert("My choice was Scissors. We are even.");
+            }
+
+  
+    </script>
+    
+</body>
+</html>
