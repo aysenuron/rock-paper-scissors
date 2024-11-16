@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <style>
-        .refresh {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 16px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <div class="refresh">
-        <h1>Refresh the page to play again.</h1>
-        <button onClick="window.location.reload();">Refresh Page</button>
+<body>
+    <main>
+
+    <h1>Make Your Choice</h1>
+
+    <div class="selection">
+        <button class="rock">Rock</button>
+        <button class="paper">Paper</button>
+        <button class="scissors">Scissors</button>
     </div>
 
+    <div class="round-scores">
+        <div class="round-answers">
+            <p class="human-selection"></p>
+            <p class="versus"></p>
+            <p class="computer-selection"></p>
+        </div>
+        <p class="round-score"></p>
+    </div>
+
+    <div class="game-scores">
+        <div class="game-answers">
+            <p class="human-score"></p>
+            <p class="computer-score"></p>
+        </div>
+        <p class="game-score"></p>
+    </div>
+
+</main>
+
     <script src="script.js"></script>
-    
+
 </body>
 </html>
